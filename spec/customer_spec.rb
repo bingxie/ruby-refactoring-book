@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Customer do
   describe '#statement' do
     it 'return text format statement' do
-      movie = Movie.new('ABC', 0)
+      movie = Movie.new('ABC', RegularPrice.new)
       rental = Rental.new(movie, 5)
 
       customer = Customer.new('Bing')
@@ -15,7 +15,7 @@ describe Customer do
     end
 
     it 'return text format statement' do
-      movie = Movie.new('ABC', 1)
+      movie = Movie.new('ABC', NewReleasePrice.new)
       rental = Rental.new(movie, 5)
 
       customer = Customer.new('Bing')
@@ -27,7 +27,7 @@ describe Customer do
     end
 
     it 'return text format statement' do
-      movie = Movie.new('ABC', 2)
+      movie = Movie.new('ABC', ChildrensPrice.new)
       rental = Rental.new(movie, 5)
 
       customer = Customer.new('Bing')
