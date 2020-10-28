@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rake'
 gem 'rubocop', require: false
+gem 'pry'
 
 group :test do
   gem 'factory_bot'
